@@ -3,32 +3,88 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #b77878;
+    background-color: #f0f0f0;
 }
-/* quiz container, game over container, high scores container styling*/ 
-#quiz-container,
-#game-over-container,
+/* question container styling*/ 
+#question-container {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
 #high-scores-container {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #fff;
+    text-align: center;
+    background-color: #104717;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#high-scores-container h2,
+#timer {
+    color: #ffffff;
+    font-size: 18px;
+}
+#high-scores-link {
+    color: #104717;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#high-scores-link:hover {
+    color: #007bff;
+}
+
+#timer {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+#game-over-container {
+    text-align: center;
+    background-color: #104717;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
+}
+
+#game-over-container h2 {
+    color: #aaaaaa;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+#game-over-container p {
+    margin-bottom: 20px;
+}
+
+#game-over-container button {
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    width: auto;
+    overflow: visible;
+    padding: 10px;
+    background-color: #104717;
+    border-radius: 10px;
+    font-size: large;
+    margin: 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#game-over-container button:hover {
+    background-color: #104717;
 }
 
 #quiz-container {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
 }
-#timer {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
-    color: #333; 
-}
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -63,7 +119,7 @@ body {
 
 #start-btn,
 #save-score-btn {
-    background-color: #007bff;
+    background-color: #104717;
     color: #fff;
     padding: 10px;
     border: none;

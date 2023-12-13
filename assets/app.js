@@ -43,6 +43,9 @@ let score = 0;
 
 // DOM elements
 const startButton = document.getElementById("start-btn");
+const quizContentContainer = document.getElementById("quiz-content");
+const highScoresLink = document.getElementById("high-scores-link");
+const feedbackContainer = document.getElementById("feedback-container"); 
 const quizContainer = document.getElementById("quiz-container");
 const gameOverContainer = document.getElementById("game-over-container");
 const highScoresContainer = document.getElementById("high-scores-container");
@@ -51,17 +54,24 @@ const choicesContainer = document.getElementById("choices-container");
 const timerElement = document.getElementById("timer");
 const finalScoreElement = document.getElementById("final-score-display");
 
-// Event listeners
+// Event listener for the Start Quiz button
 startButton.addEventListener("click", function () {
     startButton.style.display = "none";
-    quizContainer.style.display = "block";
+    quizContentContainer.style.display = "block";
+
     showQuestion();
     startTimer();
 });
+
 highScoresLink.addEventListener("click", function () {
-    // Redirect to a new page or show high scores
-    alert("High Scores Link Clicked!");
+    showHighScores();
 });
+
+function showHighScores() {
+    const scores = JSON.parse(localStorage.getItem("scores")) || [];
+    alert("High Scores: " + JSON.stringify(scores));
+}
+
 function showHighScores() {
     const scores = JSON.parse(localStorage.getItem("scores")) || [];
     alert("High Scores: " + JSON.stringify(scores));
@@ -85,10 +95,6 @@ function showQuestion() {
         endQuiz();
     }
 }
-
-// DOM element for the feedback container
-const feedbackContainer = document.getElementById("feedback-container");
-
 // Function to handle user's choice
 function handleChoice(event) {
     if (currentQuestionIndex < questions.length) {
@@ -102,21 +108,20 @@ function handleChoice(event) {
                 // User answered correctly
                 score += 1;
 
-                // Display a feedback message
+                // Displayed a feedback message
                 displayFeedback("Correct! Well done!");
             } else {
                 // User answered incorrectly
                 // Deduct 5 seconds for incorrect answers
                 time -= 5;
 
-                // Display a feedback message
+                // Displayed a feedback message
                 displayFeedback("Oops! That's incorrect.");
             }
 
             currentQuestionIndex++;
             showQuestion();
         } else {
-            // Handle invalid choice (optional)
             console.error("Invalid choice. Please try again.");
         }
     } else {
