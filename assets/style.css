@@ -1,0 +1,127 @@
+/*body styling*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b77878;
+}
+/* quiz container, game over container, high scores container styling*/ 
+#quiz-container,
+#game-over-container,
+#high-scores-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+#quiz-container {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+#timer {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #333; 
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#game-over-container {
+    text-align: center;
+        transform: translateY(-100%);
+        animation: slideDown 1s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+#feedback-container {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #007bff;
+        opacity: 0;
+        animation: fadeInOut 1s ease-in-out forwards;
+    } 
+
+#start-btn,
+#save-score-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#start-btn {
+    transition: opacity 0.5s ease-in-out;
+}
+
+#start-btn:hover {
+    opacity: 0.8;
+}
+
+#initials {
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#high-scores-list {
+    list-style: none;
+    padding: 0;
+}
+
+#high-scores-list li {
+    margin-bottom: 5px;
+}
+#quiz-container,
+#game-over-container,
+#high-scores-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    #quiz-container,
+    #game-over-container,
+    #high-scores-container {
+        max-width: 100%;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    #start-btn,
+    #save-score-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #initials {
+        padding: 3px;
+        margin-top: 5px;
+    }
+}
