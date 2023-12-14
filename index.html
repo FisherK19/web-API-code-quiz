@@ -7,53 +7,43 @@
     <title>JavaScript Quiz</title>
 </head>
 <body>
-   <!-- Start Quiz button -->
-<button id="start-btn">Start Quiz</button>
-<h2>Welcome to JavaScript Quiz Challenge</h2>
-<p>You have 60 seconds to try to get the highest score by answering seven questions of JavaScript questions. Incorrect answers will penalize your time by five seconds. Your total score will be your time after you answer the last question. Click start when you are ready.</p>
-
-<div id="quiz-content" style="display: none;">
-    <div id="question-container"></div>
-    <div id="choices-container"></div>
+    <a id="high-scores-link" href="#">View high scores</a>
     <div id="timer">Time: <span id="timerElement"></span></div>
-    <div id="final-score">Your score: <span id="finalScoreElement"></span></div>
-</div>
-        <!-- High Scores Container -->
-  <div id="high-scores-container">
-    <h2>
-        <a id="high-scores-link" href="#">View high scores</a>
-    </h2>
-    <div id="timer">Time: <span id="timerElement">75</span></div>
-</div>
-    <!-- Quiz container -->
-    <div id="quiz-container" style="display: none;">
-        <div id="question-container"></div>
-        <div id="choices-container"></div>
-        <div id="timer">Time: <span id="timerElement"></span></div>
-        <div id="final-score">Your score: <span id="finalScoreElement"></span></div>
+<div id="welcome-page">
+    <h2>Welcome to JavaScript Quiz Challenge</h2>
+    <p>You have 60 seconds to try to get the highest score by answering seven questions of JavaScript questions. Incorrect answers will penalize your time by five seconds. Your total score will be your time after you answer the last question. Click start when you are ready.</p>
+    <div id="high-scores-container">
+       
     </div>
+    <button id="start-btn">Start Quiz</button>
+</div>
 
-    <!-- Game Over Container -->
-    <div id="game-over-container" style="display: none;">
-        
-        <div id="final-score">
-            Your final score is: <span id="finalScoreElement">0</span>
-        </div>
-    
-        <div id="initials-container">
-            <label for="initials">Enter your initials to save the score:</label>
-            <input type="text" id="initials" placeholder="Enter your initials">
-            <button id="save-score-btn">Submit</button>
-        </div>
-    </div>
-
-    <!-- Feedback Container -->
-    <div id="feedback-container"></div>
-    <!-- Question container -->
+<div id="quiz-container" style="display: none;">
     <div id="question-container"></div>
-    <!-- Choices container -->
     <div id="choices-container"></div>
+    <button id="next-btn" style="display: none;">Next</button>
+</div>
 
-    <script src="assets/app.js"></script>
+<div id="game-over-container" style="display: none;">
+    <div id="final-score">
+        Your final score is: <span id="finalScoreElement"></span>
+    </div>
+
+    <div id="initials-container">
+        <label for="initials">Enter your initials to save the score:</label>
+        <input type="text" id="initials" placeholder="Enter your initials">
+        <button id="save-score-btn">Submit</button>
+    </div>
+</div>
+
+<script src="assets/app.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+

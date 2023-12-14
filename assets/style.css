@@ -10,42 +10,94 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #333;
+    color: #4e2f79;
+}
+#high-scores-container {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 10px; 
 }
 
-
-#high-scores-container {
-    text-align: center;
-    background-color: #104717;
+#start-high-scores-container {
+    text-align: left;
+    background-color: #042108;
     padding: 10px;
     margin-bottom: 20px;
 }
 
-#high-scores-container h2,
-#timer {
+#start-high-scores-container h2 {
     color: #ffffff;
     font-size: 18px;
+    margin-bottom: 5px;
 }
-#high-scores-link {
-    color: #104717;
-    text-decoration: underline;
-    cursor: pointer;
-}
-#high-scores-link:hover {
-    color: #007bff;
+#timer {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    font-size: 18px;
+    color: #090909;
 }
 
-#timer {
+/* start button styling and positioning*/
+#start-btn {
+    background-color: #104717;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start-btn:hover {
+    opacity: 0.8;
+}
+/* choices container styling and positioning */
+#choices-container {
+    text-align: center;
+    margin-top: 20px;
+    color: #104717;
+}
+#quiz-container {
+    display: none;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+#choices-container button {
+    display: block;
+    margin: 10px;
+    width: 80%;
+    background-color: #623d8f; 
+    color: #fff; 
+    padding: 10px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+}
+/* high score container styling and positioning */
+#start-high-scores-container {
+    text-align: left;
+    background-color: #f1f7f2;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#start-high-scores-container h2 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#start-timer {
     position: fixed;
     top: 10px;
     right: 10px;
     font-size: 18px;
-    color: #333;
+    color: #ffffff;
 }
-
+/* game over container styling and positioning*/
 #game-over-container {
     text-align: center;
-    background-color: #104717;
+    background-color: #786993;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -67,7 +119,7 @@ body {
     width: auto;
     overflow: visible;
     padding: 10px;
-    background-color: #104717;
+    background-color: #7c88c1;
     border-radius: 10px;
     font-size: large;
     margin: 10px;
@@ -76,12 +128,7 @@ body {
 }
 
 #game-over-container button:hover {
-    background-color: #104717;
-}
-
-#quiz-container {
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
+    background-color: #135c86;
 }
 
 
@@ -148,36 +195,14 @@ body {
 #high-scores-list li {
     margin-bottom: 5px;
 }
-#quiz-container,
-#game-over-container,
-#high-scores-container {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-}
 
 
 @media screen and (max-width: 600px) {
-    #quiz-container,
-    #game-over-container,
+    /* Responsive styles for smaller screens */
     #high-scores-container {
-        max-width: 100%;
-        margin: 10px;
-        padding: 15px;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 10px;
     }
-
-    #start-btn,
-    #save-score-btn {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    #initials {
-        padding: 3px;
-        margin-top: 5px;
-    }
+    
 }
