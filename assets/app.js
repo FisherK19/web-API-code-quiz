@@ -132,7 +132,7 @@ function showQuestion() {
     endQuiz();
   }
 }
-
+// display feedback
 function handleChoice(event) {
   const selectedButton = event.target;
   const selectedChoiceIndex = parseInt(selectedButton.getAttribute("data-index"));

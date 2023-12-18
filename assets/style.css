@@ -29,7 +29,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
-
+/* button hove styling */
 button:hover {
     background-color: #96b9b5;
 }
