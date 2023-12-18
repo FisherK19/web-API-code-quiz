@@ -23,7 +23,8 @@ WHEN the game is over
 THEN I can save my initials and score
 
 
-![img](<images/Coding-Quiz.png>)
+![img](<!(images/Code-Quiz.png)>)
 
 <h4>Usage</h4>
 https://github.com/FisherK19/web-API-code-quiz
+ https://fisherk19.github.io/web-API-code-quiz/
