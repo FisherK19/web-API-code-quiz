@@ -1,190 +1,86 @@
-/*body styling*/
+/* Body styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-}
-/* question container styling*/ 
-#question-container {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #4e2f79;
-}
-#high-scores-container {
-    text-align: left;
-    margin-top: 10px;
-    margin-left: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-#start-high-scores-container {
-    text-align: left;
-    background-color: #042108;
-    padding: 10px;
+/* Style the welcome message */
+#Welcome-message {
+    font-size: 1.5em;
     margin-bottom: 20px;
 }
 
-#start-high-scores-container h2 {
-    color: #ffffff;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-#timer {
-    position: fixed;
-    top: 10px;
-    right: 20px;
-    font-size: 18px;
-    color: #090909;
-}
-
-/* start button styling and positioning*/
-#start-btn {
-    background-color: #104717;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#start-btn:hover {
-    opacity: 0.8;
-}
-/* choices container styling and positioning */
-#choices-container {
-    text-align: center;
-    margin-top: 20px;
-    color: #104717;
-}
-#quiz-container {
-    display: none;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
-}
-#choices-container button {
+/* Style the start button */
+button {
     display: block;
-    margin: 10px;
-    width: 80%;
-    background-color: #623d8f; 
-    color: #fff; 
-    padding: 10px; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer;
-}
-/* high score container styling and positioning */
-#start-high-scores-container {
-    text-align: left;
-    background-color: #f1f7f2;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-#start-high-scores-container h2 {
-    color: #ffffff;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-#start-timer {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
-    color: #ffffff;
-}
-/* game over container styling and positioning*/
-#game-over-container {
-    text-align: center;
-    background-color: #786993;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#game-over-container h2 {
-    color: #aaaaaa;
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-#game-over-container p {
-    margin-bottom: 20px;
-}
-
-#game-over-container button {
-    font-family: Arial, Helvetica, sans-serif;
-    border: none;
-    width: auto;
-    overflow: visible;
-    padding: 10px;
-    background-color: #7c88c1;
-    border-radius: 10px;
-    font-size: large;
-    margin: 10px;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-#game-over-container button:hover {
-    background-color: #135c86;
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-#game-over-container {
-    text-align: center;
-        transform: translateY(-100%);
-        animation: slideDown 1s ease-in-out forwards;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-#feedback-container {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #007bff;
-        opacity: 0;
-        animation: fadeInOut 1s ease-in-out forwards;
-    } 
-
-#start-btn,
-#save-score-btn {
-    background-color: #104717;
+    width: auto; 
+    padding: 10px 15px; 
+    margin: 5px 0;
+    background-color: #5a4d97;
     color: #fff;
-    padding: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-#start-btn {
-    transition: opacity 0.5s ease-in-out;
+button:hover {
+    background-color: #96b9b5;
 }
 
-#start-btn:hover {
-    opacity: 0.8;
+/* Style the quiz question container */
+#quiz-question-container {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: none;
 }
 
-#initials {
-    padding: 5px;
+/* Style the feedback container */
+#feedback-container {
     margin-top: 10px;
+    color: #3f3582;
+    font-weight: bold;
+}
+
+/* Style the game over container */
+#game-over-container {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#finalScoreGameOverElement {
+    font-size: 24px;
+    font-weight: bold;
+    color: #998785;
+}
+
+/* Style the initials input and save button */
+#initials,
+#save-score-btn {
+    font-size: 1em;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+/* Style the high scores link */
+#high-scores-link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: #7463c0;
+}
+
+#high-scores-container {
+    display: none; 
 }
 
 #high-scores-list {
@@ -192,10 +88,31 @@ body {
     padding: 0;
 }
 
-#high-scores-list li {
-    margin-bottom: 5px;
+.high-score {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
+.high-score .initials {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.high-score .score {
+    font-weight: bold;
+    color: #7463c0;
+}
+
+#timerElement {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #7463c0;
+}
 
 @media screen and (max-width: 600px) {
     /* Responsive styles for smaller screens */
@@ -204,5 +121,6 @@ body {
         margin-top: 10px;
         margin-left: 10px;
     }
-    
 }
+
+

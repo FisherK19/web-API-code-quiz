@@ -7,43 +7,49 @@
     <title>JavaScript Quiz</title>
 </head>
 <body>
+    <!-- Start Quiz button -->
     <a id="high-scores-link" href="#">View high scores</a>
-    <div id="timer">Time: <span id="timerElement"></span></div>
-<div id="welcome-page">
-    <h2>Welcome to JavaScript Quiz Challenge</h2>
-    <p>You have 60 seconds to try to get the highest score by answering seven questions of JavaScript questions. Incorrect answers will penalize your time by five seconds. Your total score will be your time after you answer the last question. Click start when you are ready.</p>
-    <div id="high-scores-container">
-       
-    </div>
-    <button id="start-btn">Start Quiz</button>
-</div>
-
-<div id="quiz-container" style="display: none;">
-    <div id="question-container"></div>
-    <div id="choices-container"></div>
-    <button id="next-btn" style="display: none;">Next</button>
-</div>
-
-<div id="game-over-container" style="display: none;">
-    <div id="final-score">
-        Your final score is: <span id="finalScoreElement"></span>
+    <div id="timerElement">60</div>
+    <div id="Welcome-message">
+        <h2>Welcome to JavaScript Quiz Challenge</h2>
+        <p>You have 60 seconds to try to get the highest score by answering seven questions of JavaScript questions. Incorrect answers will penalize your time by five seconds. Your total score will be your time after you answer the last question. Click start when you are ready.</p>
+        <button id="start-btn">Start Quiz</button>
     </div>
 
-    <div id="initials-container">
-        <label for="initials">Enter your initials to save the score:</label>
-        <input type="text" id="initials" placeholder="Enter your initials">
-        <button id="save-score-btn">Submit</button>
+    <!-- Quiz content container -->
+    <div id="quiz-content">
+        <div id="quiz-question-container"></div>
+        <div id="quiz-choices-container"></div>
     </div>
-</div>
 
-<script src="assets/app.js"></script>
+    <!-- Quiz container -->
+    <div id="quiz-container">
+        <div id="quiz-timer"><span id="timerElement"></span></div>
+        <div id="final-score"><span id="finalScoreElement"></span></div>
+    </div>
+
+    <!-- Game Over Container -->
+    <div id="game-over-container">
+        <div id="game-over-final-score">
+            Your final score is: <span id="finalScoreGameOverElement">0</span>
+        </div>
+        <div id="initials-container">
+            <label for="initials">Enter your initials to save the score:</label>
+            <input type="text" id="initials" placeholder="Enter your initials">
+            <button id="save-score-btn">Submit</button>
+        </div>
+    </div>
+
+    <!-- High Scores Container -->
+    <div id="high-scores-container"></div>
+    <div id="high-scores-list"></div>
+
+    <!-- Feedback Container -->
+    <div id="feedback-container"></div>
+
+    <script src="assets/app.js"></script>
 </body>
 </html>
-
-
-
-
-
 
 
 
